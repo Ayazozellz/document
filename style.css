@@ -1,0 +1,157 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+}
+
+.container-header{
+    display: flex;
+    position: static;
+    background-color: transparent;
+    height: 60px;
+}
+
+.barier{
+    height: 1px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+}
+
+.nike-logo{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.main-walppaper{
+    position: absolute;
+}
+
+.man {
+    font-family: 'main-font';
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.man::after {
+    content: ""; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color: rgb(0, 0, 0); 
+    transition: width 0.3s ease; 
+}
+
+.man:hover::after {
+    width: 100%; 
+}
+.girl {
+    font-family: 'main-font';
+    position: absolute;
+    top: 20px;
+    left: 480px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.girl::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.girl:hover::after {
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'main-font';
+    src: url('eklenti/JetBrainsMono-ExtraBold.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.nike-shoes {
+    position: absolute;
+    left: -700px; 
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slide-in 2s ease-in-out forwards, glow-box 3s ease-in-out infinite; 
+    z-index: 10; 
+    cursor: pointer;
+}
+
+
+@keyframes slide-in {
+    0% {
+        left: -700px; 
+    }
+    100% {
+        left: 50%; 
+        transform: translateX(-50%) translateY(-50%); 
+    }
+}
+
+/* Işık Kutusu Efekti */
+@keyframes glow-box {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+        border: 5px solid transparent; 
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); 
+        border: 5px solid rgba(255, 255, 255, 0.8); 
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+        border: 5px solid transparent; 
+    }
+}
+
+@font-face {
+    font-family: 'just';
+    src: url(eklenti/Futura\ Bold.otf) format(opentype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.text1{
+    position: absolute;
+    font-family: 'just';
+    font-size: 250px;
+    top: -100px;
+    left: 35%;
+}
+
+.text2{
+    position: absolute;
+    font-family: 'just';
+    font-size: 250px;
+    top: 100px;
+    left: 40%;
+}
+
+.text3{
+    position: absolute;
+    font-family: 'just';
+    font-size: 250px;
+    top: 300px;
+    left: 45%;
+}
